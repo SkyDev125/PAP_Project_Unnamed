@@ -124,21 +124,21 @@ void onResize(HWND hwnd, UINT flag, int width, int height)
 
     switch (flag)
     {
-    case 0: // If the window is resized run the code below
-    {
-        std::cout << "Window has been resized" << std::endl;
-        break;
-    }
-    case 1: // If the window is minimized run the code below.
-    {
-        std::cout << "Window has been minimized" << std::endl;
-        break;
-    }
-    case 2: // If the window is maximized run the code below
-    {
-        std::cout << "Window has been maximized" << std::endl;
-        break;
-    }
+        case 0: // If the window is resized run the code below
+        {
+            std::cout << "Window has been resized" << std::endl;
+            break;
+        }
+        case 1: // If the window is minimized run the code below.
+        {
+            std::cout << "Window has been minimized" << std::endl;
+            break;
+        }
+        case 2: // If the window is maximized run the code below
+        {
+            std::cout << "Window has been maximized" << std::endl;
+            break;
+        }
     }
 
     std::cout << "================================================================" << std::endl;
