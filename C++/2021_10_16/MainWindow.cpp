@@ -4,15 +4,15 @@
 
 #include <windows.h>
 #include <iostream>
+#include <stdlib.h>
+#include <string>
+#include <sstream> 
 
 //function headers
-LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam); //Window procedure function
-void onResize(HWND hwnd, UINT flag, int width, int height);                      //executed when window is resized
-DWORD WINAPI secondThreadFunc(LPVOID lpParam);
-int count1();
-int count2();
-int i = 0;
-int o = 0;
+LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);    //Window procedure function
+void onResize(HWND hwnd, UINT flag, int width, int height);                         //executed when window is resized
+DWORD WINAPI secondThreadFunc(LPVOID lpParam);                                      //Creates a second Thread for the application
+int getKeyboardLayout();                                                            //Gets Keyboard Layout Dynamically as an integer in its Identifier Code
 
 //WinMain Function Region.
 int WINAPI WinMain(
@@ -175,19 +175,23 @@ DWORD WINAPI secondThreadFunc(LPVOID lpParam)
 {
     //run loop
     while (true)
-    {
-
+    {   
+        std::cout << "----------------------------------------------------------------" << std::endl;
+        std::cout << getKeyboardLayout() << std::endl;
     }
     return 0;
 }
 
-//aux funcs
-int count1()
-{
-    return i++;
-}
+int getKeyboardLayout(){
 
-int count2()
-{
-    return o++;
+    std::stringstream temp;
+    int keyboardDec;
+    std::string keyboardHex;
+
+    keyboardDec = HIWORD(GetKeyboardLayout(GetWindowThreadProcessId(GetForegroundWindow(), NULL)));
+    temp << std::hex << keyboardDec << std::endl;
+    keyboardHex = temp.str();
+
+    return stoi(keyboardHex);
+
 }
