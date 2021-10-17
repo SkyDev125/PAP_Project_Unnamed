@@ -1,0 +1,479 @@
+Language-ID Language-tag
+1 ar
+2 bg
+3 ca
+4 zh-Hans
+5 cs
+6 da
+7 de
+8 el
+9 en
+A es
+B fi
+C fr
+D he
+E hu
+F is
+10 it
+11 ja
+12 ko
+13 nl
+14 no
+15 pl
+16 pt
+17 rm
+18 ro
+19 ru
+1A hr
+1B sk
+1C sq
+1D sv
+1E th
+1F tr
+20 ur
+21 id
+22 uk
+23 be
+24 sl
+25 et
+26 lv
+27 lt
+28 tg
+29 fa
+2A vi
+2B hy
+2C az
+2D eu
+2E hsb
+2F mk
+30 st
+31 ts
+32 tn
+33 ve
+34 xh
+35 zu
+36 af
+37 ka
+38 fo
+39 hi
+3A mt
+3B se
+3C ga
+3D yi, reserved
+3E ms
+3F kk
+40 ky
+41 sw
+42 tk
+43 uz
+44 tt
+45 bn
+46 pa
+47 gu
+48 or
+49 ta
+4A te
+4B kn
+4C ml
+4D as
+4E mr
+4F sa
+50 mn
+51 bo
+52 cy
+53 km
+54 lo
+55 my
+56 gl
+57 kok
+58 mni, reserved
+59 sd
+5A syr
+5B si
+5C chr
+5D iu
+5E am
+5F tzm
+60 ks
+61 ne
+62 fy
+63 ps
+64 fil
+65 dv
+66 bin, reserved
+67 ff
+68 ha
+69 ibb, reserved
+6A yo
+6B quz
+6C nso
+6D ba
+6E lb
+6F kl
+70 ig
+71 kr, reserved
+72 om
+73 ti
+74 gn
+75 haw
+76 la, reserved
+77 so, reserved
+78 ii
+79 pap, reserved
+7A arn
+7B Neither defined nor reserved
+7C moh
+7D Neither defined nor reserved
+7E br
+7F Reserved for invariant locale behavior
+80 ug
+81 mi
+82 oc
+83 co
+84 gsw
+85 sah
+86 qut
+87 rw
+88 wo
+89 Neither defined nor reserved
+8A Neither defined nor reserved
+8B Neither defined nor reserved
+8C prs
+8D Neither defined nor reserved
+8E Neither defined nor reserved
+8F Neither defined nor reserved
+90 Neither defined nor reserved
+91 gd
+92 ku
+93 quc, reserved
+401 ar-SA
+402 bg-BG
+403 ca-ES
+404 zh-TW
+405 cs-CZ
+406 da-DK
+407 de-DE
+408 el-GR
+409 en-US
+40A es-ES_tradnl
+40B fi-FI
+40C fr-FR
+40D he-IL
+40E hu-HU
+40F is-IS
+410 it-IT
+411 ja-JP
+412 ko-KR
+413 nl-NL
+414 nb-NO
+415 pl-PL
+416 pt-BR
+417 rm-CH
+418 ro-RO
+419 ru-RU
+41A hr-HR
+41B sk-SK
+41C sq-AL
+41D sv-SE
+41E th-TH
+41F tr-TR
+420 ur-PK
+421 id-ID
+422 uk-UA
+423 be-BY
+424 sl-SI
+425 et-EE
+426 lv-LV
+427 lt-LT
+428 tg-Cyrl-TJ
+429 fa-IR
+42A vi-VN
+42B hy-AM
+42C az-Latn-AZ
+42D eu-ES
+42E hsb-DE
+42F mk-MK
+430 st-ZA
+431 ts-ZA
+432 tn-ZA
+433 ve-ZA
+434 xh-ZA
+435 zu-ZA
+436 af-ZA
+437 ka-GE
+438 fo-FO
+439 hi-IN
+43A mt-MT
+43B se-NO
+43D yi-001
+43E ms-MY
+43F kk-KZ
+440 ky-KG
+441 sw-KE
+442 tk-TM
+443 uz-Latn-UZ
+444 tt-RU
+445 bn-IN
+446 pa-IN
+447 gu-IN
+448 or-IN
+449 ta-IN
+44A te-IN
+44B kn-IN
+44C ml-IN
+44D as-IN
+44E mr-IN
+44F sa-IN
+450 mn-MN
+451 bo-CN
+452 cy-GB
+453 km-KH
+454 lo-LA
+455 my-MM
+456 gl-ES
+457 kok-IN
+458 mni-IN, reserved
+459 sd-Deva-IN, reserved
+45A syr-SY
+45B si-LK
+45C chr-Cher-US
+45D iu-Cans-CA
+45E am-ET
+45F tzm-Arab-MA
+460 ks-Arab
+461 ne-NP
+462 fy-NL
+463 ps-AF
+464 fil-PH
+465 dv-MV
+466 bin-NG, reserved
+467 ff-NG, ff-Latn-NG
+468 ha-Latn-NG
+469 ibb-NG, reserved
+46A yo-NG
+46B quz-BO
+46C nso-ZA
+46D ba-RU
+46E lb-LU
+46F kl-GL
+470 ig-NG
+471 kr-Latn-NG
+472 om-ET
+473 ti-ET
+474 gn-PY
+475 haw-US
+476 la-VA
+477 so-SO
+478 ii-CN
+479 pap-029, reserved
+47A arn-CL
+47C moh-CA
+47E br-FR
+480 ug-CN
+481 mi-NZ
+482 oc-FR
+483 co-FR
+484 gsw-FR
+485 sah-RU
+486 qut-GT, reserved
+487 rw-RW
+488 wo-SN
+48C prs-AF
+48D plt-MG, reserved
+48E zh-yue-HK, reserved
+48F tdd-Tale-CN, reserved
+490 khb-Talu-CN, reserved
+491 gd-GB
+492 ku-Arab-IQ
+493 quc-CO, reserved
+501 qps-ploc
+5FE qps-ploca
+801 ar-IQ
+803 ca-ES-valencia
+804 zh-CN
+807 de-CH
+809 en-GB
+80A es-MX
+80C fr-BE
+810 it-CH
+811 ja-Ploc-JP, reserved
+813 nl-BE
+814 nn-NO
+816 pt-PT
+818 ro-MD
+819 ru-MD
+81A sr-Latn-CS
+81D sv-FI
+820 ur-IN
+827 Neither defined nor reserved
+82C az-Cyrl-AZ, reserved
+82E dsb-DE
+832 tn-BW
+83B se-SE
+83C ga-IE
+83E ms-BN
+83F kk-Latn-KZ, reserved
+843 uz-Cyrl-UZ, reserved
+845 bn-BD
+846 pa-Arab-PK
+849 ta-LK
+850 mn-Mong-CN, reserved
+851 bo-BT, reserved
+859 sd-Arab-PK
+85D iu-Latn-CA
+85F tzm-Latn-DZ
+860 ks-Deva-IN
+861 ne-IN
+867 ff-Latn-SN
+86B quz-EC
+873 ti-ER
+9FF qps-plocm
+C00 Locale without assigned LCID if the current user default locale. See section 2.2.1.
+C01 ar-EG
+C04 zh-HK
+C07 de-AT
+C09 en-AU
+C0A es-ES
+C0C fr-CA
+C1A sr-Cyrl-CS
+C3B se-FI
+C50 mn-Mong-MN
+C51 dz-BT
+C5F tmz-MA, reserved
+C6b quz-PE
+1000 Locale without assigned LCID if the current user default locale. See section 2.2.1.
+1001 ar-LY
+1004 zh-SG
+1007 de-LU
+1009 en-CA
+100A es-GT
+100C fr-CH
+101A hr-BA
+103B smj-NO
+105F tzm-Tfng-MA
+1401 ar-DZ
+1404 zh-MO
+1407 de-LI
+1409 en-NZ
+140A es-CR
+140C fr-LU
+141A bs-Latn-BA
+143B smj-SE
+1801 ar-MA
+1809 en-IE
+180A es-PA
+180C fr-MC
+181A sr-Latn-BA
+183B sma-NO
+1C01 ar-TN
+1C09 en-ZA
+1C0A es-DO
+1C0C fr-029
+1C1A sr-Cyrl-BA
+1C3B sma-SE
+2001 ar-OM
+2008 Neither defined nor reserved
+2009 en-JM
+200A es-VE
+200C fr-RE
+201A bs-Cyrl-BA
+203B sms-FI
+2401 ar-YE
+2409 en-029, reserved
+240A es-CO
+240C fr-CD
+241A sr-Latn-RS
+243B smn-FI
+2801 ar-SY
+2809 en-BZ
+280A es-PE
+280C fr-SN
+281A sr-Cyrl-RS
+2C01 ar-JO
+2C09 en-TT
+2C0A es-AR
+2C0C fr-CM
+2C1A sr-Latn-ME
+3000 Unassigned LCID locale temporarily assigned to LCID 0x3000. See section 2.2.1.
+3001 ar-LB
+3009 en-ZW
+300A es-EC
+300C fr-CI
+301A sr-Cyrl-ME
+3400 Unassigned LCID locale temporarily assigned to LCID 0x3400. See section 2.2.1.
+3401 ar-KW
+3409 en-PH
+340A es-CL
+340C fr-ML
+3800 Unassigned LCID locale temporarily assigned to LCID 0x3800. See section 2.2.1.
+3801 ar-AE
+3809 en-ID, reserved
+380A es-UY
+380C fr-MA
+3C00 Unassigned LCID locale temporarily assigned to LCID 0x3C00. See section 2.2.1.
+3C01 ar-BH
+3C09 en-HK
+3C0A es-PY
+3C0C fr-HT
+4000 Unassigned LCID locale temporarily assigned to LCID 0x4000. See section 2.2.1.
+4001 ar-QA
+4009 en-IN
+400A es-BO
+4400 Unassigned LCID locale temporarily assigned to LCID 0x4400. See section 2.2.1.
+4401 ar-Ploc-SA, reserved
+4409 en-MY
+440A es-SV
+4800 Unassigned LCID locale temporarily assigned to LCID 0x4800. See section 2.2.1.
+4801 ar-145, reserved
+4809 en-SG
+480A es-HN
+4C00 Unassigned LCID locale temporarily assigned to LCID 0x4C00. See section 2.2.1.
+4C09 en-AE
+4C0A es-NI
+5009 en-BH, reserved
+500A es-PR
+5409 en-EG, reserved
+540A es-US
+5809 en-JO, reserved
+580A es-419, reserved
+5C09 en-KW, reserved
+5C0A es-CU
+6009 en-TR, reserved
+6409 en-YE, reserved
+641A bs-Cyrl
+681A bs-Latn
+6C1A sr-Cyrl
+701A sr-Latn
+703B smn
+742C az-Cyrl
+743B sms
+7804 zh
+7814 nn
+781A bs
+782C az-Latn
+783B sma
+783F kk-Cyrl, reserved
+7843 uz-Cyrl
+7850 mn-Cyrl
+785D iu-Cans
+785F tzm-Tfng
+7C04 zh-Hant
+7C14 nb
+7C1A sr
+7C28 tg-Cyrl
+7C2E dsb
+7C3B smj
+7C3F kk-Latn, reserved
+7C43 uz-Latn
+7C46 pa-Arab
+7C50 mn-Mong
+7C59 sd-Arab
+7C5C chr-Cher
+7C5D iu-Latn
+7C5F tzm-Latn
+7C67 ff-Latn
+7C68 ha-Latn
+7C92 ku-Arab
+F2EE reserved
+E40C fr-015, reserved
+EEEE reserved

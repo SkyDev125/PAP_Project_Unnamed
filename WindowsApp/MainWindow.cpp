@@ -12,7 +12,7 @@
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam); //Window procedure function
 void onResize(HWND hwnd, UINT flag, int width, int height);                      //executed when window is resized
 DWORD WINAPI secondThreadFunc(LPVOID lpParam);                                   //Creates a second Thread for the application
-int getKeyboardLayout();                                                         //Gets Keyboard Layout Dynamically as an integer in its Identifier Code
+std::string getKeyboardLayout();                                                 //Gets Keyboard Layout Dynamically as an integer in its Identifier Code
 
 //WinMain Function Region.
 int WINAPI WinMain(
@@ -86,12 +86,16 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     {
 
     case WM_CLOSE:
+    {
+        // User Accepted - Close the App.
         if (MessageBox(hwnd, L"Wanna exit the program?", L"Untitled Keyboard App", MB_YESNO) == IDYES)
         {
             DestroyWindow(hwnd);
         }
-        // Else: User canceled. Do nothing.
+
+        // User Canceled - do nothing
         return 0;
+    }
 
     case WM_DESTROY:
     {
@@ -169,6 +173,7 @@ DWORD WINAPI secondThreadFunc(LPVOID lpParam)
     //run loop
     while (true)
     {
+        system("CLS");
         std::cout << "----------------------------------------------------------------" << std::endl;
         std::cout << getKeyboardLayout() << std::endl;
     }
@@ -176,7 +181,7 @@ DWORD WINAPI secondThreadFunc(LPVOID lpParam)
 }
 
 //Function to get the keyboard layout at any point in time.
-int getKeyboardLayout()
+std::string getKeyboardLayout()
 {
 
     std::stringstream temp;
@@ -191,5 +196,5 @@ int getKeyboardLayout()
     temp << std::hex << keyboardDec << std::endl;
     keyboardHex = temp.str();
 
-    return stoi(keyboardHex);
+    return keyboardHex;
 }
