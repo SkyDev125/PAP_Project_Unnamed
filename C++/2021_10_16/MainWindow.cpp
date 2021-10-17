@@ -6,17 +6,17 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include <sstream> 
+#include <sstream>
 
 //function headers
-LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);    //Window procedure function
-void onResize(HWND hwnd, UINT flag, int width, int height);                         //executed when window is resized
-DWORD WINAPI secondThreadFunc(LPVOID lpParam);                                      //Creates a second Thread for the application
-int getKeyboardLayout();                                                            //Gets Keyboard Layout Dynamically as an integer in its Identifier Code
+LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam); //Window procedure function
+void onResize(HWND hwnd, UINT flag, int width, int height);                      //executed when window is resized
+DWORD WINAPI secondThreadFunc(LPVOID lpParam);                                   //Creates a second Thread for the application
+int getKeyboardLayout();                                                         //Gets Keyboard Layout Dynamically as an integer in its Identifier Code
 
 //WinMain Function Region.
 int WINAPI WinMain(
-    #pragma region WinMain();
+#pragma region WinMain();
 
     _In_ HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
@@ -37,11 +37,11 @@ int WINAPI WinMain(
     // Create the window.
 
     HWND hwnd = CreateWindowEx(
-    #pragma region WindowsEX;
-        0,                           // Optional window styles.
-        CLASS_NAME,                  // Window class
-        L"Untitled Keyboard App",    // Window text
-        WS_OVERLAPPEDWINDOW,         // Window style
+#pragma region WindowsEX;
+        0,                        // Optional window styles.
+        CLASS_NAME,               // Window class
+        L"Untitled Keyboard App", // Window text
+        WS_OVERLAPPEDWINDOW,      // Window style
 
         // Size and position
         CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
@@ -50,7 +50,7 @@ int WINAPI WinMain(
         NULL,      // Menu
         hInstance, // Instance handle
         NULL       // Additional application data
-    #pragma endregion WindowsEX;
+#pragma endregion WindowsEX;
     );
 
     //Cancel the window procedure if it isnt assigned to a process number.
@@ -62,7 +62,7 @@ int WINAPI WinMain(
     //Show the window
     ShowWindow(hwnd, nCmdShow);
 
-    if(CreateThread(NULL,0,secondThreadFunc,NULL,0,NULL) == NULL)
+    if (CreateThread(NULL, 0, secondThreadFunc, NULL, 0, NULL) == NULL)
     {
         return 0;
     }
@@ -70,13 +70,13 @@ int WINAPI WinMain(
     // Run the message loop.
     MSG msg = {};
     while (GetMessage(&msg, NULL, 0, 0) > 0)
-    {   
+    {
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }
 
     return 0;
-    #pragma endregion WinMain();
+#pragma endregion WinMain();
 }
 
 //WinProc Region
@@ -84,14 +84,14 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch (uMsg)
     {
-    
+
     case WM_CLOSE:
-    if (MessageBox(hwnd, L"Wanna exit the program?", L"Untitled Keyboard App", MB_YESNO) == IDYES)
-    {
-        DestroyWindow(hwnd);
-    }
-    // Else: User canceled. Do nothing.
-    return 0;
+        if (MessageBox(hwnd, L"Wanna exit the program?", L"Untitled Keyboard App", MB_YESNO) == IDYES)
+        {
+            DestroyWindow(hwnd);
+        }
+        // Else: User canceled. Do nothing.
+        return 0;
 
     case WM_DESTROY:
     {
@@ -99,19 +99,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         return 0;
     }
 
-    case WM_INPUTLANGCHANGE:
-    {
-        std::cout << lParam << std::endl;
-        std::cout << "Input Changed" << std::endl;
-        break;
-    }
-
     case WM_PAINT:
     {
         PAINTSTRUCT ps;
         HDC hdc = BeginPaint(hwnd, &ps);
 
-        FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW-2));
+        FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW - 2));
 
         EndPaint(hwnd, &ps);
         break;
@@ -175,23 +168,28 @@ DWORD WINAPI secondThreadFunc(LPVOID lpParam)
 {
     //run loop
     while (true)
-    {   
+    {
         std::cout << "----------------------------------------------------------------" << std::endl;
         std::cout << getKeyboardLayout() << std::endl;
     }
     return 0;
 }
 
-int getKeyboardLayout(){
+//Function to get the keyboard layout at any point in time.
+int getKeyboardLayout()
+{
 
     std::stringstream temp;
     int keyboardDec;
     std::string keyboardHex;
 
-    keyboardDec = HIWORD(GetKeyboardLayout(GetWindowThreadProcessId(GetForegroundWindow(), NULL)));
+    keyboardDec = HIWORD(
+        GetKeyboardLayout(
+            GetWindowThreadProcessId(
+                GetForegroundWindow(), NULL)));
+
     temp << std::hex << keyboardDec << std::endl;
     keyboardHex = temp.str();
 
     return stoi(keyboardHex);
-
 }
