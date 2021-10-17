@@ -40,7 +40,7 @@ int WINAPI WinMain(
     #pragma region WindowsEX;
         0,                           // Optional window styles.
         CLASS_NAME,                  // Window class
-        L"Untitled Keyboard APP",    // Window text
+        L"Untitled Keyboard App",    // Window text
         WS_OVERLAPPEDWINDOW,         // Window style
 
         // Size and position
@@ -85,6 +85,14 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     switch (uMsg)
     {
     
+    case WM_CLOSE:
+    if (MessageBox(hwnd, L"Wanna exit the program?", L"Untitled Keyboard App", MB_YESNO) == IDYES)
+    {
+        DestroyWindow(hwnd);
+    }
+    // Else: User canceled. Do nothing.
+    return 0;
+
     case WM_DESTROY:
     {
         PostQuitMessage(0);
